@@ -1,0 +1,8 @@
+__pycache__
+.vscode
+saved_examples
+venv
+Women_Clothing_Dataset
+*.sh
+*.out
+*.jpg
