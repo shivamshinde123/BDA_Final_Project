@@ -7,8 +7,8 @@ def drag_gan_edit(
     initial_latent,
     source_points,
     target_points,
-    num_steps=500,
-    lr=0.05,
+    num_steps=2000,
+    lr=0.005,
     device="cuda",
     is_w_input=False,
     log_resolution=7
