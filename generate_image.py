@@ -16,10 +16,10 @@ if __name__ == "__main__":
     LOG_RESOLUTION = 7
 
     gen  = Generator(LOG_RESOLUTION, W_DIM).to(DEVICE)
-    gen.load_state_dict(torch.load(os.path.join('stylegan2_checkpoints', 'gen.pth')))
+    gen.load_state_dict(torch.load(os.path.join('stylegan2_checkpoints', 'gen.pth'), map_location=DEVICE))
 
     mapping_network  = MappingNetwork(Z_DIM, W_DIM).to(DEVICE)
-    mapping_network.load_state_dict(torch.load(os.path.join('stylegan2_checkpoints', 'mapping_network.pth')))
+    mapping_network.load_state_dict(torch.load(os.path.join('stylegan2_checkpoints', 'mapping_network.pth'), map_location=DEVICE))
 
     gen.eval()
     mapping_network.eval()
